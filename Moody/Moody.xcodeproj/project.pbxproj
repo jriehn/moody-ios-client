@@ -13,6 +13,7 @@
 		63B588311B30AAE600C9919A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63B588301B30AAE600C9919A /* Images.xcassets */; };
 		63B588341B30AAE600C9919A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63B588321B30AAE600C9919A /* LaunchScreen.xib */; };
 		63B588401B30AAE600C9919A /* MoodyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B5883F1B30AAE600C9919A /* MoodyTests.swift */; };
+		923A838826E36380E8AD9EDF /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E95215CAF09D01AC18674A /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +27,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		42E95215CAF09D01AC18674A /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E1189625CE26B5BDE268074 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		63B588241B30AAE600C9919A /* Moody.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moody.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63B588281B30AAE600C9919A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63B588291B30AAE600C9919A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +39,7 @@
 		63B588391B30AAE600C9919A /* MoodyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoodyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		63B5883E1B30AAE600C9919A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63B5883F1B30AAE600C9919A /* MoodyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodyTests.swift; sourceTree = "<group>"; };
+		972816E6819285E2B98F00B5 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				923A838826E36380E8AD9EDF /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,12 +61,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		25E39ABFEFD7D81F30ACAE0D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4E1189625CE26B5BDE268074 /* Pods.debug.xcconfig */,
+				972816E6819285E2B98F00B5 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		63B5881B1B30AAE600C9919A = {
 			isa = PBXGroup;
 			children = (
 				63B588261B30AAE600C9919A /* Moody */,
 				63B5883C1B30AAE600C9919A /* MoodyTests */,
 				63B588251B30AAE600C9919A /* Products */,
+				25E39ABFEFD7D81F30ACAE0D /* Pods */,
+				B44E38BF30F1ACF0AF04AFCF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,6 +128,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		B44E38BF30F1ACF0AF04AFCF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				42E95215CAF09D01AC18674A /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -119,9 +143,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 63B588431B30AAE600C9919A /* Build configuration list for PBXNativeTarget "Moody" */;
 			buildPhases = (
+				C55D591D427CF8477A6FBBF3 /* Check Pods Manifest.lock */,
 				63B588201B30AAE600C9919A /* Sources */,
 				63B588211B30AAE600C9919A /* Frameworks */,
 				63B588221B30AAE600C9919A /* Resources */,
+				8D4E464B82F67114C233A8AB /* Embed Pods Frameworks */,
+				90F91E52924B39E3083EEDE7 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -206,6 +233,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8D4E464B82F67114C233A8AB /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		90F91E52924B39E3083EEDE7 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C55D591D427CF8477A6FBBF3 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		63B588201B30AAE600C9919A /* Sources */ = {
@@ -338,21 +413,25 @@
 		};
 		63B588441B30AAE600C9919A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E1189625CE26B5BDE268074 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Moody/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		63B588451B30AAE600C9919A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 972816E6819285E2B98F00B5 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Moody/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -409,6 +488,7 @@
 				63B588451B30AAE600C9919A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		63B588461B30AAE600C9919A /* Build configuration list for PBXNativeTarget "MoodyTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +497,7 @@
 				63B588481B30AAE600C9919A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

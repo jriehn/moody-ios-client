@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  Moody
-//
-//  Created by Jan Riehn on 16/06/2015.
-//  Copyright (c) 2015 Moody. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain
