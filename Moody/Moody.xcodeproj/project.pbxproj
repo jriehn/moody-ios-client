@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		63B5882A1B30AAE600C9919A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B588291B30AAE600C9919A /* AppDelegate.swift */; };
-		63B5882C1B30AAE600C9919A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B5882B1B30AAE600C9919A /* ViewController.swift */; };
+		63B5882C1B30AAE600C9919A /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B5882B1B30AAE600C9919A /* ChatViewController.swift */; };
 		63B5882F1B30AAE600C9919A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63B5882D1B30AAE600C9919A /* Main.storyboard */; };
 		63B588311B30AAE600C9919A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63B588301B30AAE600C9919A /* Images.xcassets */; };
 		63B588341B30AAE600C9919A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63B588321B30AAE600C9919A /* LaunchScreen.xib */; };
 		63B588401B30AAE600C9919A /* MoodyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B5883F1B30AAE600C9919A /* MoodyTests.swift */; };
+		63DBECD01B36F09C009B2EA1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DBECCF1B36F09C009B2EA1 /* MainViewController.swift */; };
+		63DBECD41B36F166009B2EA1 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DBECD31B36F166009B2EA1 /* Chat.swift */; };
 		923A838826E36380E8AD9EDF /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E95215CAF09D01AC18674A /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -32,13 +34,15 @@
 		63B588241B30AAE600C9919A /* Moody.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moody.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63B588281B30AAE600C9919A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63B588291B30AAE600C9919A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		63B5882B1B30AAE600C9919A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		63B5882B1B30AAE600C9919A /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		63B5882E1B30AAE600C9919A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		63B588301B30AAE600C9919A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		63B588331B30AAE600C9919A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		63B588391B30AAE600C9919A /* MoodyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoodyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		63B5883E1B30AAE600C9919A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63B5883F1B30AAE600C9919A /* MoodyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodyTests.swift; sourceTree = "<group>"; };
+		63DBECCF1B36F09C009B2EA1 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		63DBECD31B36F166009B2EA1 /* Chat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		972816E6819285E2B98F00B5 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,8 +97,9 @@
 		63B588261B30AAE600C9919A /* Moody */ = {
 			isa = PBXGroup;
 			children = (
+				63DBECD21B36F156009B2EA1 /* Chat */,
+				63DBECD11B36F0A2009B2EA1 /* Views */,
 				63B588291B30AAE600C9919A /* AppDelegate.swift */,
-				63B5882B1B30AAE600C9919A /* ViewController.swift */,
 				63B5882D1B30AAE600C9919A /* Main.storyboard */,
 				63B588301B30AAE600C9919A /* Images.xcassets */,
 				63B588321B30AAE600C9919A /* LaunchScreen.xib */,
@@ -126,6 +131,23 @@
 				63B5883E1B30AAE600C9919A /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		63DBECD11B36F0A2009B2EA1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				63DBECCF1B36F09C009B2EA1 /* MainViewController.swift */,
+				63B5882B1B30AAE600C9919A /* ChatViewController.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		63DBECD21B36F156009B2EA1 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				63DBECD31B36F166009B2EA1 /* Chat.swift */,
+			);
+			name = Chat;
 			sourceTree = "<group>";
 		};
 		B44E38BF30F1ACF0AF04AFCF /* Frameworks */ = {
@@ -287,7 +309,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63B5882C1B30AAE600C9919A /* ViewController.swift in Sources */,
+				63DBECD01B36F09C009B2EA1 /* MainViewController.swift in Sources */,
+				63DBECD41B36F166009B2EA1 /* Chat.swift in Sources */,
+				63B5882C1B30AAE600C9919A /* ChatViewController.swift in Sources */,
 				63B5882A1B30AAE600C9919A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
