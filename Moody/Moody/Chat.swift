@@ -2,12 +2,12 @@ import Foundation
 import Socket_IO_Client_Swift
 
 public protocol ChatProtocol {
-    func onReceiveMessage(message: String)
+    func onReceiveMessage(message: Message)
 }
 
 public class Chat {
     let socket : SocketIOClient
-    var chatItems: [String] = []
+    var chatItems: [Message] = []
     let delegate: ChatProtocol
 
     public init(socketURL: String, delegate: ChatProtocol) {
@@ -18,8 +18,14 @@ public class Chat {
     }
     
     func addHandlers() {
-        socket.on("chat message") {[weak self] data, ack in
-            var message = data!.firstObject! as! String
+        socket.on(MessageType.CHAT_MESSAGE.rawValue) {[weak self] data, ack in
+            var chat = data!.firstObject! as! [String: AnyObject]
+            
+            var stringMessage = chat["message"] as! String
+            var type = MessageType(rawValue: chat["type"] as! String)!
+            
+            var message = Message(text: stringMessage, type: type)
+            
             self!.chatItems.append(message)
             self!.delegate.onReceiveMessage(message)
             return
@@ -31,6 +37,6 @@ public class Chat {
     }
     
     public func sendMessage(message: String) {
-        self.socket.emit("chat message", message)
+        self.socket.emit("CHAT", message)
     }
 }

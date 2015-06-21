@@ -31,8 +31,22 @@ extension ChatViewController: UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier("chatCell", forIndexPath: indexPath) as! MyChatCell
-        cell.label.text = chat.chatItems[indexPath.item]
+        let message = chat.chatItems[indexPath.item]
+        switch message.type {
+        case .CHAT_MESSAGE: return renderChatMessage(message, indexPath:indexPath)
+        case .MOODY_MESSAGE: return renderMoodyMessage(message,indexPath:indexPath)
+        }
+    }
+    
+    private func renderChatMessage(message: Message, indexPath: NSIndexPath) -> UITableViewCell {
+        var cell = chatView.dequeueReusableCellWithIdentifier("chatCell", forIndexPath: indexPath) as! MyChatCell
+        cell.label.text = chat.chatItems[indexPath.item].text
+        return cell
+    }
+    
+    private func renderMoodyMessage(message: Message, indexPath: NSIndexPath) -> UITableViewCell {
+        var cell = chatView.dequeueReusableCellWithIdentifier("chatCell", forIndexPath: indexPath) as! UITableViewCell
+        cell.textLabel!.text = chat.chatItems[indexPath.item].text
         return cell
     }
 }
@@ -46,7 +60,7 @@ extension ChatViewController: UITextFieldDelegate {
 }
 
 extension ChatViewController: ChatProtocol {
-    func onReceiveMessage(message: String) {
+    func onReceiveMessage(message: Message) {
         self.chatView.reloadData()
         self.textField.text = ""
     }
