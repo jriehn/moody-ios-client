@@ -210,6 +210,7 @@
 				TargetAttributes = {
 					63B588231B30AAE600C9919A = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = E6UTG6EP85;
 					};
 					63B588381B30AAE600C9919A = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -440,6 +441,7 @@
 			baseConfigurationReference = 4E1189625CE26B5BDE268074 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Moody/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -452,6 +454,7 @@
 			baseConfigurationReference = 972816E6819285E2B98F00B5 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Moody/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
