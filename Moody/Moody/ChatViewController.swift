@@ -1,6 +1,5 @@
 import UIKit
 
-
 class ChatViewController: UIViewController, UITableViewDelegate {
 
     @IBOutlet var chatView: UITableView!
@@ -8,10 +7,12 @@ class ChatViewController: UIViewController, UITableViewDelegate {
     
     var chat: Chat!
     
-        
     override func viewDidLoad() {
         super.viewDidLoad()
         chat = Chat(socketURL: "localhost:3000", delegate: self)
+        chat.connect()
+        let nibName = UINib(nibName: "MyChatCell", bundle:nil)
+        self.chatView.registerNib(nibName, forCellReuseIdentifier: "chatCell")
         
         chatView.dataSource = self
         chatView.delegate = self
@@ -30,8 +31,8 @@ extension ChatViewController: UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier("chatCell", forIndexPath: indexPath) as! UITableViewCell
-        cell.textLabel!.text = chat.chatItems[indexPath.item]
+        var cell = tableView.dequeueReusableCellWithIdentifier("chatCell", forIndexPath: indexPath) as! MyChatCell
+        cell.label.text = chat.chatItems[indexPath.item]
         return cell
     }
 }

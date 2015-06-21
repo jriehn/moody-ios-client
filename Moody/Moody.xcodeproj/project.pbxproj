@@ -15,6 +15,10 @@
 		63B588401B30AAE600C9919A /* MoodyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B5883F1B30AAE600C9919A /* MoodyTests.swift */; };
 		63DBECD01B36F09C009B2EA1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DBECCF1B36F09C009B2EA1 /* MainViewController.swift */; };
 		63DBECD41B36F166009B2EA1 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DBECD31B36F166009B2EA1 /* Chat.swift */; };
+		63DBECD71B36F8A5009B2EA1 /* MyChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DBECD51B36F8A5009B2EA1 /* MyChatCell.swift */; };
+		63DBECD81B36F8A5009B2EA1 /* MyChatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63DBECD61B36F8A5009B2EA1 /* MyChatCell.xib */; };
+		63DBECDB1B36F8BD009B2EA1 /* OtherChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DBECD91B36F8BD009B2EA1 /* OtherChatCell.swift */; };
+		63DBECDC1B36F8BD009B2EA1 /* OtherChatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63DBECDA1B36F8BD009B2EA1 /* OtherChatCell.xib */; };
 		923A838826E36380E8AD9EDF /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E95215CAF09D01AC18674A /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -43,6 +47,10 @@
 		63B5883F1B30AAE600C9919A /* MoodyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodyTests.swift; sourceTree = "<group>"; };
 		63DBECCF1B36F09C009B2EA1 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		63DBECD31B36F166009B2EA1 /* Chat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
+		63DBECD51B36F8A5009B2EA1 /* MyChatCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyChatCell.swift; sourceTree = "<group>"; };
+		63DBECD61B36F8A5009B2EA1 /* MyChatCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyChatCell.xib; sourceTree = "<group>"; };
+		63DBECD91B36F8BD009B2EA1 /* OtherChatCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherChatCell.swift; sourceTree = "<group>"; };
+		63DBECDA1B36F8BD009B2EA1 /* OtherChatCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OtherChatCell.xib; sourceTree = "<group>"; };
 		972816E6819285E2B98F00B5 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,7 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				63DBECD21B36F156009B2EA1 /* Chat */,
-				63DBECD11B36F0A2009B2EA1 /* Views */,
+				63DBECD11B36F0A2009B2EA1 /* View */,
 				63B588291B30AAE600C9919A /* AppDelegate.swift */,
 				63B5882D1B30AAE600C9919A /* Main.storyboard */,
 				63B588301B30AAE600C9919A /* Images.xcassets */,
@@ -133,13 +141,17 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		63DBECD11B36F0A2009B2EA1 /* Views */ = {
+		63DBECD11B36F0A2009B2EA1 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				63DBECCF1B36F09C009B2EA1 /* MainViewController.swift */,
 				63B5882B1B30AAE600C9919A /* ChatViewController.swift */,
+				63DBECD51B36F8A5009B2EA1 /* MyChatCell.swift */,
+				63DBECD61B36F8A5009B2EA1 /* MyChatCell.xib */,
+				63DBECD91B36F8BD009B2EA1 /* OtherChatCell.swift */,
+				63DBECDA1B36F8BD009B2EA1 /* OtherChatCell.xib */,
 			);
-			name = Views;
+			name = View;
 			sourceTree = "<group>";
 		};
 		63DBECD21B36F156009B2EA1 /* Chat */ = {
@@ -243,7 +255,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				63B5882F1B30AAE600C9919A /* Main.storyboard in Resources */,
+				63DBECD81B36F8A5009B2EA1 /* MyChatCell.xib in Resources */,
 				63B588341B30AAE600C9919A /* LaunchScreen.xib in Resources */,
+				63DBECDC1B36F8BD009B2EA1 /* OtherChatCell.xib in Resources */,
 				63B588311B30AAE600C9919A /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -314,6 +328,8 @@
 				63DBECD41B36F166009B2EA1 /* Chat.swift in Sources */,
 				63B5882C1B30AAE600C9919A /* ChatViewController.swift in Sources */,
 				63B5882A1B30AAE600C9919A /* AppDelegate.swift in Sources */,
+				63DBECDB1B36F8BD009B2EA1 /* OtherChatCell.swift in Sources */,
+				63DBECD71B36F8A5009B2EA1 /* MyChatCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
